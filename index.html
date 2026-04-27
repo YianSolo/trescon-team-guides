@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reconnecting your LinkedIn profile to Trescon</title>
+  <meta name="description" content="A Trescon team guide for re-linking your LinkedIn profile to our reinstated company page — on Desktop, iPhone and Android." />
+  <link rel="icon" href="images/trescon_logo.svg" />
+
+  <meta property="og:title" content="Reconnecting your LinkedIn profile to Trescon" />
+  <meta property="og:description" content="A two-minute walkthrough for Desktop, iPhone and Android." />
+  <meta property="og:image" content="images/trescon_logo.svg" />
+  <meta property="og:type" content="article" />
+
+  <style>
+    /* ---------- Brand fonts ---------- */
+    /* Optima LT Pro — display / headlines */
+    @font-face {
+      font-family: 'Optima LT Pro';
+      src: url('fonts/OptimaLTPro-Roman.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Optima LT Pro';
+      src: url('fonts/OptimaLTPro-Italic.otf') format('opentype');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Optima LT Pro';
+      src: url('fonts/OptimaLTPro-Medium.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* Montserrat — body / UI */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('fonts/Montserrat-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root{
+      /* Greens */
+      --green:        #6FA84B;
+      --green-dark:   #4F8230;
+      --green-soft:   #E9F1DF;
+      --green-mist:   #F4F8EE;
+      /* Inks */
+      --ink:          #161718;
+      --ink-soft:     #2C2D2F;
+      --ink-mute:     #6E7075;
+      /* Papers */
+      --paper:        #FAFAF6;
+      --cream:        #F4F0E7;
+      --line:         #E6E4DA;
+      /* Radii */
+      --r-sm: 10px;
+      --r-md: 18px;
+      --r-lg: 28px;
+      --r-xl: 36px;
+      /* Shadows */
+      --shadow-sm: 0 1px 2px rgba(20,22,18,.04), 0 4px 14px rgba(20,22,18,.05);
+      --shadow-md: 0 6px 24px rgba(20,22,18,.07), 0 2px 6px rgba(20,22,18,.04);
+      --shadow-lg: 0 24px 60px -20px rgba(20,22,18,.18), 0 8px 28px rgba(20,22,18,.08);
+      /* Layout */
+      --max-width: 880px; /* tighter than the default 1240 — this is a long-form guide */
+      --gutter: 32px;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ margin: 0; padding: 0; }
+    html{ scroll-behavior: smooth; }
+    body{
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a{ color: var(--green-dark); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+    em{ font-style: italic; }
+
+    .container{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+    @media (max-width: 600px){
+      .container{ padding: 0 22px; }
+    }
+
+    /* ---------- Typography ---------- */
+    .display{
+      font-family: 'Optima LT Pro', 'Optima', Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.06;
+    }
+    .display em{
+      font-style: italic;
+      font-weight: 400;
+      color: var(--green-dark);
+    }
+    h1.display{ font-size: clamp(36px, 5.5vw, 60px); line-height: 1.04; margin: 0; }
+    h2.display{ font-size: clamp(30px, 4vw, 46px); margin: 0 0 8px; }
+    h3.display{ font-size: clamp(22px, 2.4vw, 28px); font-weight: 500; margin: 0 0 8px; }
+
+    .eyebrow{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11.5px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .eyebrow::before{
+      content: "";
+      width: 18px;
+      height: 1px;
+      background: var(--green);
+    }
+
+    .lead{ font-size: 17px; color: var(--ink-soft); }
+
+    /* ---------- Top nav ---------- */
+    .nav{
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(180%) blur(18px);
+      -webkit-backdrop-filter: saturate(180%) blur(18px);
+      background: rgba(250, 250, 246, 0.78);
+      border-bottom: 1px solid rgba(230, 228, 218, 0.6);
+    }
+    .nav-inner{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 14px var(--gutter);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .brand{
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Optima LT Pro', 'Optima', Georgia, serif;
+      font-weight: 500; font-size: 18px;
+      color: var(--ink);
+    }
+    .brand img{
+      width: 26px; height: 26px;
+      border-radius: 6px;
+      display: block;
+    }
+    .brand span.divider{ color: var(--ink-mute); margin: 0 4px; font-weight: 300; }
+    .brand small{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      color: var(--ink-mute);
+      font-weight: 500;
+    }
+    .nav-links{
+      margin-left: auto;
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    .nav-links a{
+      color: var(--ink-soft);
+      font-size: 13.5px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+    .nav-links a:hover{
+      background: var(--green-soft);
+      color: var(--green-dark);
+      text-decoration: none;
+    }
+    @media (max-width: 600px){
+      .nav-links{ width: 100%; margin-left: 0; }
+      .brand small{ display: none; }
+    }
+
+    /* ---------- Hero (inset dark) ---------- */
+    .hero{
+      background: var(--ink);
+      color: #F4F0E7;
+      margin: 18px 14px 0;
+      border-radius: var(--r-xl);
+      padding: 80px 0 88px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before{
+      content:""; position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 18% 28%, rgba(111,168,75,.22) 0, transparent 52%),
+        radial-gradient(circle at 82% 78%, rgba(79,130,48,.18) 0, transparent 55%);
+      pointer-events: none;
+    }
+    .hero-inner{
+      position: relative;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+    .hero .eyebrow{ color: rgba(255,255,255,.62); }
+    .hero .eyebrow::before{ background: var(--green); }
+    .hero h1{ color: #FFFFFF; margin-top: 18px; max-width: 18ch; }
+    .hero h1 em{ color: var(--green); }
+    .hero p.lead{
+      color: rgba(255,255,255,.78);
+      margin: 22px 0 0;
+      max-width: 56ch;
+      font-size: 18px;
+    }
+
+    /* ---------- Article ---------- */
+    article{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 56px var(--gutter) 24px;
+    }
+    article p{ margin: 0 0 16px; color: var(--ink-soft); }
+    article p.lead{ color: var(--ink-soft); }
+
+    section.block{
+      padding: 24px 0 12px;
+    }
+    section.block + section.block{ padding-top: 56px; }
+    section.block .eyebrow{ margin-bottom: 14px; }
+
+    h3.subhead{
+      font-family: 'Optima LT Pro', 'Optima', Georgia, serif;
+      font-weight: 500;
+      font-size: 22px;
+      color: var(--ink);
+      margin: 36px 0 8px;
+    }
+
+    /* ---------- Numbered steps ---------- */
+    ol.steps{
+      list-style: none;
+      counter-reset: step;
+      padding: 0;
+      margin: 18px 0 8px;
+    }
+    ol.steps > li{
+      counter-increment: step;
+      position: relative;
+      padding: 4px 0 4px 56px;
+      margin-bottom: 14px;
+      color: var(--ink-soft);
+    }
+    ol.steps > li::before{
+      content: counter(step);
+      position: absolute;
+      left: 0; top: 0;
+      width: 36px; height: 36px;
+      background: var(--green-soft);
+      color: var(--green-dark);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Optima LT Pro', 'Optima', Georgia, serif;
+      font-weight: 500;
+      font-size: 17px;
+      font-variant-numeric: tabular-nums;
+    }
+    ol.steps strong{ color: var(--ink); font-weight: 600; }
+
+    /* ---------- Figures ---------- */
+    .figure{
+      margin: 22px 0 28px;
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+    }
+    .figure img{
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: var(--r-md);
+    }
+    .figure figcaption{
+      text-align: center;
+      color: var(--ink-mute);
+      font-style: italic;
+      font-size: 14px;
+      margin-top: 14px;
+      font-family: 'Optima LT Pro', 'Optima', Georgia, serif;
+    }
+
+    /* ---------- Mobile mockup row ---------- */
+    .mobile-row{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin: 24px 0 36px;
+    }
+    .mobile-row figure{
+      margin: 0;
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      padding: 14px 14px 12px;
+      box-shadow: var(--shadow-sm);
+    }
+    .mobile-row img{
+      width: 100%; height: auto; display: block;
+      border-radius: var(--r-md);
+    }
+    .mobile-row figcaption{
+      text-align: center;
+      color: var(--ink-mute);
+      font-size: 13px;
+      margin-top: 10px;
+      font-family: 'Optima LT Pro', 'Optima', Georgia, serif;
+      font-style: italic;
+    }
+    @media (max-width: 720px){
+      .mobile-row{ grid-template-columns: 1fr; }
+    }
+
+    /* ---------- Callout (cream card) ---------- */
+    .callout{
+      background: var(--green-mist);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      padding: 24px 26px;
+      margin: 26px 0;
+    }
+    .callout h4{
+      font-family: 'Optima LT Pro', 'Optima', Georgia, serif;
+      font-weight: 500;
+      font-size: 19px;
+      color: var(--ink);
+      margin: 0 0 10px;
+    }
+    .callout p{ margin: 0 0 8px; color: var(--ink-soft); }
+    .callout p:last-child{ margin: 0; }
+
+    .small-note{
+      font-size: 14px;
+      color: var(--ink-mute);
+    }
+
+    /* ---------- Three-dot divider ---------- */
+    .three-dot{
+      display: inline-flex;
+      gap: 6px;
+      margin: 36px 0 8px;
+    }
+    .three-dot span{
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+    .three-dot span:nth-child(2){ background: var(--green-dark); }
+    .three-dot span:nth-child(3){ background: var(--ink); }
+    .divider-row{
+      display: flex; justify-content: center;
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq h3{
+      font-family: 'Optima LT Pro', 'Optima', Georgia, serif;
+      font-weight: 500;
+      font-size: 19px;
+      color: var(--ink);
+      margin: 28px 0 6px;
+    }
+    .faq p{ margin: 0 0 4px; color: var(--ink-soft); }
+
+    /* ---------- CTA strip ---------- */
+    .cta-strip{
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      padding: 38px 36px;
+      margin: 40px 0 0;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+    }
+    .cta-strip::before{
+      content:""; position: absolute; inset: 0;
+      background: radial-gradient(circle at 90% -10%, rgba(111,168,75,.18) 0, transparent 55%);
+      pointer-events: none;
+    }
+    .cta-strip > *{ position: relative; }
+    .cta-strip h2{
+      font-family: 'Optima LT Pro', 'Optima', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(22px, 2.6vw, 30px);
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      color: var(--ink);
+      margin: 0 0 8px;
+    }
+    .cta-strip h2 em{ color: var(--green-dark); font-style: italic; }
+    .cta-strip p{ margin: 0; color: var(--ink-soft); font-size: 15px; }
+    .cta-strip .actions{ display: flex; gap: 10px; flex-wrap: wrap; }
+    @media (max-width: 720px){
+      .cta-strip{ grid-template-columns: 1fr; padding: 28px 24px; }
+    }
+
+    .btn{
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 22px;
+      border-radius: 999px;
+      font-weight: 600; font-size: 14px;
+      transition: transform .15s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease, color .2s ease;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .btn-primary{
+      background: var(--green); color: #fff;
+      box-shadow: 0 6px 18px -6px rgba(111,168,75,.55);
+    }
+    .btn-primary:hover{
+      background: var(--green-dark);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+    .btn-ghost{
+      background: transparent;
+      border-color: var(--line);
+      color: var(--ink-soft);
+    }
+    .btn-ghost:hover{
+      border-color: var(--green);
+      color: var(--green-dark);
+      text-decoration: none;
+    }
+
+    /* ---------- Footer ---------- */
+    footer{
+      background: var(--ink);
+      color: #E5E2D7;
+      border-radius: var(--r-xl) var(--r-xl) 0 0;
+      margin: 64px 14px 0;
+      padding: 56px 0 36px;
+    }
+    .footer-inner{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      justify-content: space-between;
+    }
+    .footer-brand{
+      display: inline-flex; align-items: center; gap: 12px;
+      font-family: 'Optima LT Pro', 'Optima', Georgia, serif; font-size: 18px;
+      color: #fff;
+    }
+    .footer-brand img{
+      width: 28px; height: 28px; border-radius: 6px;
+    }
+    .footer-meta{
+      color: rgba(255,255,255,.55);
+      font-size: 13px;
+    }
+
+    /* ---------- Print ---------- */
+    @media print{
+      .nav, .cta-strip{ display: none; }
+      .hero, footer{ -webkit-print-color-adjust: exact; print-color-adjust: exact; margin: 0; border-radius: 0; }
+      body{ background: #fff; }
+      .figure, .mobile-row figure{ box-shadow: none; }
+    }
+
+    /* ---------- Focus ---------- */
+    a:focus-visible, .btn:focus-visible{
+      outline: 2px solid var(--green);
+      outline-offset: 3px;
+      border-radius: 999px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a class="brand" href="#top">
+        <img src="images/trescon_logo.svg" alt="Trescon" />
+        Trescon <span class="divider">·</span> <small>Team guide</small>
+      </a>
+      <div class="nav-links">
+        <a href="#desktop">Desktop</a>
+        <a href="#iphone">iPhone</a>
+        <a href="#android">Android</a>
+        <a href="#troubleshooting">Troubleshooting</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">Team guide — April 2026</span>
+      <h1 class="display">Reconnecting your LinkedIn profile <em>to Trescon.</em></h1>
+      <p class="lead">A quick walkthrough for Desktop, iPhone and Android.</p>
+    </div>
+  </header>
+
+  <article>
+
+    <p>Hi team,</p>
+    <p class="lead">The fix is quick — under two minutes — and you only need to do it on one device. Once you save the change, it syncs across desktop and mobile.</p>
+
+    <aside class="callout">
+      <h4>Before you start</h4>
+      <p>Open your LinkedIn profile and scroll to your Experience section.</p>
+      <p>Make sure you’re signed in to the LinkedIn account you normally use for work.</p>
+      <p>When searching, pick the Trescon page with our logo — if in doubt, confirm with Yianni before saving.</p>
+    </aside>
+
+    <!-- DESKTOP -->
+    <section class="block" id="desktop">
+      <span class="eyebrow">Option one — recommended</span>
+      <h2 class="display">On a <em>computer.</em></h2>
+      <p class="lead">This is the easiest way to make the change. You’ll find the logo picker is clearer on desktop than on mobile.</p>
+
+      <h3 class="subhead">Update your current Trescon role</h3>
+      <ol class="steps">
+        <li>Go to <a href="https://www.linkedin.com" target="_blank" rel="noopener">linkedin.com</a> and sign in.</li>
+        <li>Click the <strong>Me</strong> icon in the top navigation, then <strong>Profile</strong> (View Profile).</li>
+      </ol>
+      <figure class="figure">
+        <img src="images/desktop_01_me_menu.svg" alt="Click your profile photo (Me) in the top nav, then View Profile" />
+        <figcaption>Click your profile photo (“Me”) in the top nav, then <em>View Profile.</em></figcaption>
+      </figure>
+
+      <ol class="steps" start="3">
+        <li>Scroll to the <strong>Experience</strong> section.</li>
+        <li>Find your current Trescon role and click the <strong>pencil (edit) icon</strong> next to it.</li>
+      </ol>
+      <figure class="figure">
+        <img src="images/desktop_02_experience_pencil.svg" alt="Pencil icon next to your Trescon role" />
+        <figcaption>Click the pencil next to your current Trescon role — not the one at the top of the whole Experience card.</figcaption>
+      </figure>
+
+      <ol class="steps" start="5">
+        <li>Click in the <strong>Company name</strong> field and delete what’s there.</li>
+        <li>Start typing <strong>Trescon</strong>. A dropdown will appear — select the entry that shows our logo. <em>Do not</em> select any Trescon option without our logo.</li>
+      </ol>
+      <figure class="figure">
+        <img src="images/desktop_03_company_dropdown.svg" alt="Pick the Trescon option with our logo, not the one without" />
+        <figcaption>The correct option has our logo. Any result without a logo is the impostor page — don’t pick that one.</figcaption>
+      </figure>
+
+      <ol class="steps" start="7">
+        <li>Scroll to the bottom of the edit window and click <strong>Save</strong>.</li>
+        <li>Refresh your profile — the Trescon logo should now appear beside your role.</li>
+      </ol>
+
+      <h3 class="subhead">If your profile still shows the other company as a separate role</h3>
+      <p>Sometimes the old (incorrect) employer appears as its own entry. If that happens:</p>
+      <ol class="steps">
+        <li>In your Experience section, click the <strong>pencil icon</strong> next to the incorrect employer.</li>
+        <li>Click <strong>Delete experience</strong> at the bottom of the edit window and confirm.</li>
+      </ol>
+      <p class="small-note">Only delete the duplicate or incorrect entry. <strong>Do not</strong> delete your real employment history.</p>
+
+      <div class="divider-row"><div class="three-dot"><span></span><span></span><span></span></div></div>
+    </section>
+
+    <!-- IPHONE -->
+    <section class="block" id="iphone">
+      <span class="eyebrow">Option two</span>
+      <h2 class="display">On <em>iPhone</em> or iPad.</h2>
+      <p class="lead">You’ll need the LinkedIn app from the App Store. If it’s already installed, make sure it’s up to date.</p>
+
+      <div class="mobile-row">
+        <figure>
+          <img src="images/mobile_01_profile_photo.svg" alt="Tap your profile photo to open the menu" />
+          <figcaption>① Tap profile photo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/mobile_02_experience_pencil.svg" alt="Tap the pencil on the Experience card" />
+          <figcaption>② Pencil on Experience</figcaption>
+        </figure>
+        <figure>
+          <img src="images/mobile_03_company_dropdown.svg" alt="Pick the Trescon option with our logo" />
+          <figcaption>③ Pick Trescon with logo</figcaption>
+        </figure>
+      </div>
+
+      <ol class="steps">
+        <li>Open the LinkedIn app and sign in.</li>
+        <li>Tap your <strong>profile photo</strong> in the top-left corner, then tap <strong>View Profile</strong>.</li>
+        <li>Scroll down to the Experience section.</li>
+        <li>Tap the <strong>pencil icon</strong> in the top-right of the Experience section, then tap the pencil next to your current Trescon role.</li>
+        <li>Tap the <strong>Company</strong> field and clear the existing text.</li>
+        <li>Type <strong>Trescon</strong> and choose the result with our logo from the list. Avoid any result without a logo.</li>
+        <li>Tap <strong>Save</strong> in the top-right corner.</li>
+        <li>Back out to your profile and pull down to refresh — your role should now be linked to Trescon with our logo.</li>
+      </ol>
+
+      <aside class="callout">
+        <h4>Can’t see the pencil icon?</h4>
+        <p>Make sure you’re looking at your own profile (tap your photo, then <em>View Profile</em>).</p>
+        <p>If the app still doesn’t show it, update LinkedIn in the App Store and try again — or use desktop.</p>
+      </aside>
+
+      <div class="divider-row"><div class="three-dot"><span></span><span></span><span></span></div></div>
+    </section>
+
+    <!-- ANDROID -->
+    <section class="block" id="android">
+      <span class="eyebrow">Option three</span>
+      <h2 class="display">On <em>Android.</em></h2>
+      <p class="lead">The steps on Android are almost identical to iPhone — the screens above are a good visual reference. You’ll need the LinkedIn app from Google Play (up to date).</p>
+
+      <ol class="steps">
+        <li>Open the LinkedIn app and sign in.</li>
+        <li>Tap your <strong>profile photo</strong> in the top-left corner, then tap <strong>View Profile</strong>.</li>
+        <li>Scroll down to the Experience section.</li>
+        <li>Tap the <strong>pencil icon</strong> on the Experience card, then tap the pencil next to your current Trescon role.</li>
+        <li>Tap the <strong>Company</strong> field and clear the existing text.</li>
+        <li>Type <strong>Trescon</strong> and choose the result with our logo. If nothing shows a logo, stop and message Yianni before saving.</li>
+        <li>Tap the <strong>tick (✓)</strong> or <strong>Save</strong> in the top-right.</li>
+        <li>Pull down on your profile to refresh. The Trescon logo should now sit beside your role.</li>
+      </ol>
+
+      <div class="divider-row"><div class="three-dot"><span></span><span></span><span></span></div></div>
+    </section>
+
+    <!-- TROUBLESHOOTING -->
+    <section class="block faq" id="troubleshooting">
+      <span class="eyebrow">Section four</span>
+      <h2 class="display">Quick <em>troubleshooting.</em></h2>
+
+      <h3>I can see two Trescon options — which one do I pick?</h3>
+      <p>Pick the one with our logo. If both look similar, use desktop to make the change — the logos are easier to distinguish there. When in doubt, send Yianni a screenshot before saving.</p>
+
+      <h3>The old company still shows up after I save</h3>
+      <p>Two likely causes: (1) LinkedIn has cached the old view — sign out and back in, or wait a few minutes and refresh; (2) there’s a duplicate Experience entry. Edit your Experience list and delete the duplicate with the wrong employer (never delete your real Trescon role).</p>
+
+      <h3>I don’t have a pencil/edit icon</h3>
+      <p>You’re probably viewing someone else’s profile or an older app version. Make sure you’re on your own profile (tap your photo → View Profile) and update the LinkedIn app. If it still doesn’t appear, use desktop.</p>
+
+      <h3>It saved, but my co-workers can’t see the change</h3>
+      <p>LinkedIn sometimes takes a few hours to update across the network. Give it up to 24 hours before worrying about it.</p>
+    </section>
+
+    <!-- CTA strip -->
+    <section class="cta-strip" aria-label="Need a hand">
+      <div>
+        <h2>Need a <em>hand?</em></h2>
+        <p>If anything looks off — a wrong logo, a result you’re unsure about, or an error from LinkedIn — pause and send Yianni a screenshot before saving. Thanks for taking the two minutes; it keeps our team properly visible on our reinstated page.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary"
+           href="mailto:yiannig@trescon.com.au?subject=LinkedIn%20guide%20%E2%80%94%20I%20need%20a%20hand&body=Hi%20Yianni%2C%0D%0A%0D%0AI%20got%20stuck%20on%20step%3A%20%5B...%5D%0D%0A%0D%0AScreenshot%20attached.%0D%0A%0D%0AThanks%21"
+           target="_blank"
+           rel="noopener">
+          Email Yianni
+        </a>
+      </div>
+    </section>
+
+  </article>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/trescon_logo.svg" alt="Trescon" />
+        Trescon
+      </div>
+      <div class="footer-meta">Team guide · Updated April 2026</div>
+    </div>
+  </footer>
+
+</body>
+</html>
